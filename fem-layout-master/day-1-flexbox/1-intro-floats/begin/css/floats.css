@@ -87,11 +87,16 @@ div img {
 	.col-1-4 {
 		width: 20%;
 	}
-	
-	.col-narrow {
-		width: 68%;
+
+	.col-2 {
+		width: 44%;
 	}
+
 	.col-3 {
 		width: 68%;
+	}
+
+	.col-4 {
+		width: 92%;
 	}
 }
