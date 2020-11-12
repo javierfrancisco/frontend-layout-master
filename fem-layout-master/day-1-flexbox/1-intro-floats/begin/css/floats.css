@@ -31,13 +31,67 @@ div img {
 }
 
 /* grid system -- mobile first! */
+.row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
 
+[class*='col-'] {
+	width: 92%;
+	margin-left: 4%;
+	margin-right: 4%;
+	min-height: 1px;
+}
+
+.col-1-2 {
+	background-color: aquamarine;
+}
+
+.col-2 {
+	background-color: #b0ae27;
+}
+
+.col-1-4 {
+	background-color: #27b065;
+}
+
+.col-3 {
+	background-color: #7227b0;
+}
 
 /* Mobile Landscape Screen Sizes */
-@media only screen and (min-width: 480px)  {
+@media only screen and (min-width: 480px) {
+	[class*='col-'] {
+		float: left;
+		min-height: 1px;
+		margin-right: 0%;
+	}
+	
+	.col-1-2,
+	.col-2 {
+		width: 44%;
+	}
+	
+	.col-1-4,
+	.col-3,
+	.col-4 {
+		width: 92%;
+	}
 
 }
 /* Desktop screen Sizes */
 @media only screen and (min-width: 768px) {
 
+	.col-1-2,
+	.col-1-4 {
+		width: 20%;
+	}
+	
+	.col-narrow {
+		width: 68%;
+	}
+	.col-3 {
+		width: 68%;
+	}
 }
